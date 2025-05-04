@@ -18,10 +18,15 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-6 bg-gray-50">
-      <h1 className="text-4xl font-bold mb-6">Fight Antisemitism</h1>
-      <SearchBar onSearch={handleSearch} />
-      <RefutationResult refutation={result} />
+    <div className="min-h-screen flex flex-col items-center justify-center p-6 text-center">
+      <h1 className="text-5xl mb-8">Fight Antisemitism</h1>
+      <p className="text-gray-600 mb-10 max-w-2xl">
+        Enter a claim to instantly get a strong, factual refutation. Help stop misinformation and hate.
+      </p>
+      <div className="w-full max-w-md">
+        <SearchBar onSearch={handleSearch} />
+        <RefutationResult refutation={result} />
+      </div>
     </div>
   );
 }
